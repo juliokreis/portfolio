@@ -5,21 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
     <title>Júlio Reis | Portfólio</title>
 </head>
 
 <body>
 
-    <button id="open-sidebar-button">
+    <button id="open-sidebar-button" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false" aria-controls="navbar">
         ☰
     </button>
 
+    <button id="open-sidebar-button">☰</button>
     <div class="particulas"></div>
 
     <nav>
         <ul>
             <li><button id="close-sidebar-button">✕</button></li>
-            <li class="inicio-li"><a class="active-link" href="index.html" >Início</a></li>
+            <li class="inicio-li"><a class="active-link" href="index.html">Início</a></li>
             <li><a href="#sobre.html">Sobre mim</a></li>
             <li><a href="#projetos.html">Projetos</a></li>
             <li><a href="#contatos.html" class="accent-link">Contatos</a></li>
@@ -113,23 +115,6 @@
         </form>
 
     </section>
-
-<!--     <script>
-        function enviarWhats(event) {
-            event.preventDefault()
-
-            const nome = document.getElementById('nome').value;
-            const mensagem = document.getElementById('mensagem').value;
-            const telefone = '5561991965150'; // Substitua pelo seu número de WhatsApp com código do país
-
-            const textoMensagem = `Olá, meu nome é ${nome}. ${mensagem}`
-            const msgFormatada = encodeURIComponent(textoMensagem);
-
-            const urlWhatsApp = `https://wa.me/${telefone}?text=${msgFormatada}`
-
-            window.open(urlWhatsApp, '_blank')
-        }
-    </script> -->
 </body>
 
 </html>
