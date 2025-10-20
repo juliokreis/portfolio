@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Júlio Reis | Portfólio</title>
+</head>
+
+<body>
+
+    <button id="open-sidebar-button">
+        ☰
+    </button>
+
+    <div class="particulas"></div>
+
+    <nav>
+        <ul>
+            <li><button id="close-sidebar-button">✕</button></li>
+            <li class="inicio-li"><a class="active-link" href="index.html" >Início</a></li>
+            <li><a href="#sobre.html">Sobre mim</a></li>
+            <li><a href="#projetos.html">Projetos</a></li>
+            <li><a href="#contatos.html" class="accent-link">Contatos</a></li>
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+        <img src="./assets/img/foto-perfil.png" alt="foto de Júlio Reis" class="foto-perfil">
+        <h1>Júlio Reis</h1>
+        <p class="formacao">
+            Desenvolvedor back end
+            <br>
+            Analista de dados
+        </p>
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="titulo">Sobre mim</h2>
+        <div class="conteudo-descricao">
+            <p class="descricao">Sou um desenvolvedor apaixonado por criar soluções inovadoras e eficientes. Com
+                experiência em diversas tecnologias, busco sempre aprender e me aprimorar.
+            </p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="titulo-projetos">Projetos</h2>
+        <div class="lista-projetos">
+            <div class="projeto-card">
+                <img src="./assets/img/projeto1.png" alt="projeto-1" class="imagem-projeto">
+                <div class="detalhes-projeto">
+                    <h3 class="nome-projeto">Loja de carros</h3>
+                    <p class="descricao-projeto">
+                        ipsum Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis quidem, tempora fugiat
+                        consectetur dolor veniam ad explicabo, ab dolore aliquam quam? Iste quidem molestiae nobis
+                        nostrum
+                        dolor ratione sit esse.
+                        <br>
+                        <br>
+                        <a href="#" class="link-projeto-1">Ver mais</a>
+                    </p>
+                </div>
+            </div>
+            <div class="projeto-card">
+                <img src="./assets/img/projeto2.png" alt="projeto-2" class="imagem-projeto">
+                <div class="detalhes-projeto">
+                    <h3 class="nome-projeto">Página de viagens</h3>
+                    <p class="descricao-projeto">
+                        ipsum Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis quidem, tempora fugiat
+                        consectetur dolor veniam ad explicabo, ab dolore aliquam quam? Iste quidem molestiae nobis
+                        nostrum
+                        dolor ratione sit esse.
+                        <br>
+                        <br>
+                        <a href="#" class="link-projeto">Ver mais</a>
+                    </p>
+                </div>
+            </div>
+            <div class="projeto-card">
+                <img src="./assets/img/projeto3.png" alt="projeto-3" class="imagem-projeto">
+                <div class="detalhes-projeto">
+                    <h3 class="nome-projeto">Microsoft</h3>
+                    <p class="descricao-projeto">
+                        ipsum Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis quidem, tempora fugiat
+                        consectetur dolor veniam ad explicabo, ab dolore aliquam quam? Iste quidem molestiae nobis
+                        nostrum
+                        dolor ratione sit esse.
+                        <br>
+                        <br>
+                        <a href="#" class="link-projeto">Ver mais</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="titulo-contatos">Contatos</h2>
+
+        <form class="form-contato" id="formulario" onsubmit="enviarWhats(event)">
+            <div class="form-grupo">
+                <input placeholder="Digite seu nome" class="form-campo" id="nome">
+            </div>
+
+            <div class="form-grupo">
+                <textarea class="form-campo" placeholder="Digite sua mensagem" rows="4" id="mensagem"></textarea>
+            </div>
+
+            <button type="submit" class="botao-enviar">Enviar WhatsApp</button>
+
+        </form>
+
+    </section>
+
+<!--     <script>
+        function enviarWhats(event) {
+            event.preventDefault()
+
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '5561991965150'; // Substitua pelo seu número de WhatsApp com código do país
+
+            const textoMensagem = `Olá, meu nome é ${nome}. ${mensagem}`
+            const msgFormatada = encodeURIComponent(textoMensagem);
+
+            const urlWhatsApp = `https://wa.me/${telefone}?text=${msgFormatada}`
+
+            window.open(urlWhatsApp, '_blank')
+        }
+    </script> -->
+</body>
+
+</html>
