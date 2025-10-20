@@ -11,22 +11,21 @@
 
 <body>
 
-    <button id="open-sidebar-button" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false" aria-controls="navbar">
-        ☰
-    </button>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <button id="open-sidebar-button">☰</button>
-    <div class="particulas"></div>
+    <button id="open-sidebar-button" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false" aria-controls="navbar">☰</button>
 
-    <nav>
+    <nav id="navbar">
         <ul>
-            <li><button id="close-sidebar-button">✕</button></li>
+            <li><button id="close-sidebar-button" onclick="closeSidebar()" aria-label="close sidebar">✕</button></li>
             <li class="inicio-li"><a class="active-link" href="index.html">Início</a></li>
             <li><a href="#sobre.html">Sobre mim</a></li>
             <li><a href="#projetos.html">Projetos</a></li>
-            <li><a href="#contatos.html" class="accent-link">Contatos</a></li>
+            <li><a class="accent-link" href="#contatos.html">Contato</a></li>
         </ul>
     </nav>
+
+    <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
 
     <main id="inicio" class="cabecalho">
         <img src="./assets/img/foto-perfil.png" alt="foto de Júlio Reis" class="foto-perfil">
