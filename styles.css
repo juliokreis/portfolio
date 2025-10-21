@@ -1,12 +1,13 @@
 :root {
-    --primaria: #4f46e5;
-    --secundaria: #7c3aed;
-    --escura: #0f172a;
-    --mais-escura: #0a0f1c;
-    --clara: #e2e8f0;
-    --vidro: rgba(255, 255, 255, 0.1);
-    --texto: #c9c9c9;
-    --hover: #272832;
+    --primary-color: #4f46e5;
+    --second-color: #7c3aed;
+    --accent-color: #0071ff;
+    --text-color: #c9c9c9;
+    --dark: #0f172a;
+    --hover-color: #272832;
+    --very-dark: #0a0f1c;
+    --clear: #e2e8f0;
+    --glass: rgba(255, 255, 255, 0.1);
 }
 
 * {
@@ -24,8 +25,8 @@ html {
 body {
     min-height: 100vh;
     min-height: 100dvh;
-    background: var(--mais-escura);
-    color: var(--clara);
+    background: var(--very-dark);
+    color: var(--clear);
     line-height: 1.6;
     margin: auto;
     padding: 0 1rem;
@@ -38,9 +39,13 @@ main {
 }
 
 nav {
-    background-color: var(--);
-    border-bottom: 1px solid var(--hover);
- 
+    position: fixed;
+    background: rgba (15, 23, 42, 0.8);
+    border-bottom: 1px solid var(--hover-color);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    top: 0;
+    z-index: 10;
 }
 
 nav ul {
@@ -98,11 +103,12 @@ nav a.accent-link {
         top: 0;
         right: -100%;
         height: 100vh;
-        width: min(15em, 100%);
-        z-index: 10;
-        border-left: 1px solid var(--hover);
-        background: var(--escura);
-        transition: right 300ms ease-out;
+        width: min(15em, 40%);
+        z-index: 100;
+        border-left: 1px solid var(--hover-color);
+        background: var(--dark);
+        transition: right .3s ease-out;
+        backdrop-filter: blur(10px);
     }
 
     nav .show {
