@@ -189,6 +189,11 @@ nav a.accent-link {
     nav .inicio-li {
         margin-right: unset;
     }
+
+    main .cabecalho{
+        margin-top: 20px;
+        padding: min(5em, 7%);
+    }
 }
 
 .cabecalho {
