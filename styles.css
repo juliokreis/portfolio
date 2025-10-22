@@ -36,19 +36,19 @@ body {
 }
 
 main {
-    margin-top: 125px;
+    margin-top: 100px;
     padding: min(5em, 7%);
 }
 
 nav {
     top: 10px;
-    width: 100%;
+    width: 95%;
     z-index: 10;
     position: fixed;
-    border-radius: 16px;
+    border-radius: 10px;
     backdrop-filter: blur(10px);
     background: rgba(255, 255, 255, 0.05);
-    padding: 5px 25px;
+    padding: 5px 20px;
 }
 
 nav ul {
@@ -62,11 +62,6 @@ nav .inicio-li {
 
 nav li {
     display: flex;
-    margin: 0 0.5em;
-}
-
-.logo {
-    display: none;
 }
 
 nav a {
@@ -82,19 +77,17 @@ nav a:hover {
 }
 
 nav a.active-link {
-    border-bottom: 2px solid var(--text-color);
+    border-bottom: 1px solid var(--text-color);
 }
 
 nav a.accent-link {
-    background-color: var(--accent-color);
-    border-radius: 16px;
+    background-color: var(--glass);
+    border-radius: 10px;
 }
 
 #open-sidebar-button{
     display: flex;
-    width: fit-content;
     background: none;
-    color: var(--text-color);
     border: none;
     padding: 1em;
     margin-left: auto;
@@ -141,25 +134,18 @@ nav a.accent-link {
     outline: 3px solid #fff;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
 
     #open-sidebar-button,
     #close-sidebar-button {
         display: block;
     }
 
-    #open-sidebar-button #navbar nav ul a.logo{
-        display: flex;
+    #open-sidebar-button {
+        display: block;
         color: var(--text-color);
-        align-items: center;
-        justify-content: space-between;
-        position: fixed;
-        background: rgba (15, 23, 42, 0.8);
         backdrop-filter: blur(10px);
-        width: 100%;
-        right: 0;
-        top: 0;
-        z-index: 11;
+        margin-left: auto;
     }
 
     nav {
@@ -167,24 +153,22 @@ nav a.accent-link {
         top: 0;
         right: -100%;
         height: 100vh;
-        width: min(15em, 40%);
-        z-index: 100;
+        width: min(15em, 50%);
+        z-index: 10;
         border-left: 1px solid var(--hover-color);
-        background: var(--dark);
-        transition: right .3s ease-out;
-        backdrop-filter: blur(10px);
+        transition: right 300ms ease-out;
     }
 
     nav.show {
         right: 0;
     }
 
-    nav.show~#overlay {
+    nav.show ~ #overlay {
         display: block;
     }
 
     nav ul {
-        width: 50%;
+        width: 100%;
         flex-direction: column;
     }
 
@@ -194,7 +178,7 @@ nav a.accent-link {
     }
 
     nav a.active-link {
-        border: none;
+        border-bottom: none;
     }
 
     nav .inicio-li {
