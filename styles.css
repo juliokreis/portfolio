@@ -175,21 +175,6 @@ nav a.accent-link {
         backdrop-filter: blur(10px);
     }
 
-    /* .navbar-logo {
-        display: flex;
-        width: fit-content;
-        font-family: poppins;
-        font-size: 32px;
-        font-weight: 600;
-        color: var(--text-color);
-        text-decoration: none;
-        cursor: pointer;
-        padding: 15px;
-        box-sizing: border-box;
-        align-items: center;
-        justify-content: space-between;
-    } */
-
     nav.show {
         right: 0;
     }
